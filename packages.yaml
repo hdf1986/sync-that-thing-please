@@ -1,0 +1,9 @@
+snap_packages:
+  - spotify
+  - google-chrome
+  - stremio
+  - zoom
+apt_packages:
+  - cheese
+git_repos:
+  - 

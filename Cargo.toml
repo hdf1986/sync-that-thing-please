@@ -7,6 +7,9 @@ edition = "2018"
 
 [dependencies]
 sysinfo = "0.19.1"
+serde = "1.0.126"
+serde_yaml = "0.8.7"
+serde_derive = "1.0.126"
 
 [[bin]]
 name = "sync-that-thing-please"

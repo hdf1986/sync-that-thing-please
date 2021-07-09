@@ -1,0 +1,17 @@
+- Folder structure creation & sync [in progress]
+
+- Autosync of generic dot files
+- Automated installation of packages when possible
+- Configurable backup of configs
+- Autodetection of packages not included in config
+- Git integrated
+- Daemons handling
+- Autoupdate of it's own code
+- Secret avoidance
+- Backup tools
+  - Ensure git repos are up-to-date & pushed
+  - Review typical folders looking for custom files
+- Sync of /bin executables
+- workspace directories handling
+- Autoclone selected repos
+- Autoinclusion of custom scripts
