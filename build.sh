@@ -15,4 +15,6 @@ cargo build --release
 
 cp $HOME/.sync-that-thing-please/source/target/release/sync-that-thing-please $HOME/.sync-that-thing-please/bin
 
+ln -s $HOME/.sync-that-thing-please/bin $HOME/bin 
+
 $HOME/.sync-that-thing-please/bin/sync-that-thing-please
