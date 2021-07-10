@@ -68,7 +68,7 @@ fn main () {
       file.read_to_string(&mut content).unwrap();
       ensure_folders_exists(&content);
     },
-    Err(error) => {
+    Err(_) => {
       if !Path::new(filename).exists() {
         let mut file = File::create(filename).unwrap();
         file.write_all(DEFAULT_FOLDER_FILE.as_bytes()).unwrap();
