@@ -1,6 +1,4 @@
+
 structure:
   $HOME:
-    workspace:
-    .sync-that-thing-please:
-      tmp:
-      config:
+    workspace2
