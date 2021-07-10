@@ -1,4 +1,4 @@
-- Folder structure creation & sync [in progress]
+- Folder structure creation & sync [Done]
 
 - Autosync of generic dot files
 - Automated installation of packages when possible

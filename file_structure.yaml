@@ -1,5 +1,6 @@
 structure:
-  $home:
+  $HOME:
     workspace:
     .sync-that-thing-please:
-      tmp
+      tmp:
+      config:

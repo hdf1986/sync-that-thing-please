@@ -2,19 +2,29 @@ use std::fs::File;
 use std::io::Read;
 use std::collections::HashMap;
 use serde_yaml::{Value};
+use std::fs;
 
 fn ensure_folders_exists() {
   let filename = "file_structure.yaml";
+  fn mkdirp(path: &String) {
+    let expanded_path = String::from(shellexpand::env(path).unwrap());
+    match fs::create_dir_all(expanded_path) {
+      Ok(_) => println!("Created {} and it's parent nodes", &path),
+      Err(error) => panic!("Error creating {}: {:?}", path, error)
+    }
+  }
 
   fn iterate_and_create (node: &Value, path: &String) {
     match node {
       Value::String(_) => {
-        println!("Hubiera creado carpeta {}{}\n", &path, node.as_str().unwrap());
+        let mut new_path: String = path.to_owned();
+        new_path.push_str(node.as_str().unwrap());
+        new_path.push_str("/");
+
+        mkdirp(&new_path);
       },
       Value::Mapping(content) => {
         for (key, item) in content {
-          println!("Hubiera creado carpeta {}{}\n", &path, key.as_str().unwrap());
-
           let mut new_path: String = path.to_owned();
           new_path.push_str(key.as_str().unwrap());
           new_path.push_str("/");
@@ -22,7 +32,7 @@ fn ensure_folders_exists() {
           iterate_and_create(item, &new_path);
         }
       },
-      Value::Null => (),
+      Value::Null => mkdirp(&path),
       _ => println!("{:?}\n", node)
     }
   }
