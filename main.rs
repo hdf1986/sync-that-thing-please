@@ -13,6 +13,7 @@ structure:
       tmp:
       config:
       bin:
+      source:
 ";
 
 static DEFAULT_FOLDER_FILE: &str = "
@@ -68,8 +69,6 @@ fn main () {
       ensure_folders_exists(&content);
     },
     Err(error) => {
-      println!("There is an error {}: {}", filename, error);
-      
       if !Path::new(filename).exists() {
         let mut file = File::create(filename).unwrap();
         file.write_all(DEFAULT_FOLDER_FILE.as_bytes()).unwrap();
