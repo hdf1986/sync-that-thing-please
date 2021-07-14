@@ -10,6 +10,9 @@ else
   git clone git@github.com:hdf1986/sync-that-thing-please.git $HOME/.sync-that-thing-please/source --depth=1
 fi
 
+cd $HOME/.sync-that-thing-please/config
+git init
+
 cd $HOME/.sync-that-thing-please/source
 
 cargo build --release

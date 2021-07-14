@@ -1,7 +1,8 @@
 - Folder structure creation & sync [Done]
 - Update of it's own code [Done]
 - AutoUpdate of it's own code [Done]
-- One liner installation [Not started]
+- One liner installation [Done]
+- Autodetection of packages not included in config [In progress]
 - Automated installation of packages when possible [Not started]
 
 - Autosync of generic dot files
