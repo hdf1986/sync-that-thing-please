@@ -22,3 +22,5 @@
 
 # Installation
 
+sh -c "$(curl -fsSL https://raw.github.com/hdf1986/sync-that-thing-please/master/build.sh)"
+
