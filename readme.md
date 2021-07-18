@@ -8,7 +8,9 @@ I could've made a bunch of bash scripts to solve this? yeah, but wanted to keep 
 
 # Installation
 
+```bash
 sh -c "$(curl -fsSL https://raw.github.com/hdf1986/sync-that-thing-please/master/build.sh)"
+```
 
 # TODO's
 Yeah, having this in a github project is a todo too
